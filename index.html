@@ -170,7 +170,7 @@
             min-height: 120px;
         }
 
-        .project-card, .cert-card {
+        .project-card,         .cert-card {
             background: #f8f9fa;
             padding: 25px;
             margin: 20px 0;
@@ -182,6 +182,99 @@
         .project-card:hover, .cert-card:hover {
             transform: translateX(10px);
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            justify-content: center;
+        }
+
+        .badge-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 250px;
+        }
+
+        .badge-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .badge-card img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        .badge-card h4 {
+            color: #667eea;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .badge-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .badge-link:hover {
+            color: #764ba2;
+        }
+
+        .cert-downloads {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .cert-download-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #667eea30;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .cert-download-card:hover {
+            border-color: #667eea;
+            transform: scale(1.03);
+        }
+
+        .cert-download-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .download-btn {
+            background: white;
+            color: #667eea;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+            border: 2px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #667eea;
+            color: white;
         }
 
         .tag {
@@ -334,37 +427,92 @@
         <section id="certifications" class="section">
             <h2>Certifications Cisco</h2>
             
-            <div class="cert-card">
-                <h3>🏆 CCNA - Cisco Certified Network Associate</h3>
-                <p><strong>Statut :</strong> En cours de préparation</p>
-                <p>Certification validant les compétences fondamentales en réseaux, incluant les protocoles réseau, 
-                la sécurité IP, l'accès WAN et sans fil, et la connectivité IP.</p>
-                <p><strong>Compétences couvertes :</strong></p>
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>Fondamentaux des réseaux</li>
-                    <li>Accès réseau</li>
-                    <li>Connectivité IP et services</li>
-                    <li>Fondamentaux de la sécurité</li>
-                    <li>Automatisation et programmabilité</li>
-                </ul>
+            <h3 style="text-align: center; color: #764ba2; margin: 30px 0;">🏆 Badges Credly Vérifiés</h3>
+            <div class="badge-container">
+                <div class="badge-card">
+                    <img src="https://images.credly.com/size/340x340/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png" alt="CCNA ITN Badge">
+                    <h4>CCNA: Introduction to Networks</h4>
+                    <p style="font-size: 0.9em; color: #666;">Cisco Networking Academy</p>
+                    <a href="https://www.credly.com/badges/11483ca9-97c2-4864-9602-dc50e89fd714" target="_blank" class="badge-link">Voir le badge vérifié →</a>
+                </div>
+                
+                <div class="badge-card">
+                    <img src="https://images.credly.com/size/340x340/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png" alt="CCNA SRWE Badge">
+                    <h4>CCNA: Switching, Routing & Wireless</h4>
+                    <p style="font-size: 0.9em; color: #666;">Cisco Networking Academy</p>
+                    <a href="https://www.credly.com/badges/74c9196e-e985-4cc3-98dd-f2af9aff87d6" target="_blank" class="badge-link">Voir le badge vérifié →</a>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px;">📜 Certificats Cisco Networking Academy</h3>
+            <div class="cert-downloads">
+                <div class="cert-download-card" onclick="downloadCert('CCNA_ENSA')">
+                    <h4>📘 CCNA: Enterprise Networking, Security & Automation</h4>
+                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
+                        Configuration avancée, automatisation réseau, et sécurité d'entreprise
+                    </p>
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('CCNA_ENSA')">
+                        📥 Télécharger le certificat
+                    </a>
+                </div>
+
+                <div class="cert-download-card" onclick="downloadCert('CCNA_SRWE')">
+                    <h4>📗 CCNA: Switching, Routing & Wireless Essentials</h4>
+                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
+                        Configuration des switches, routage et réseaux sans fil
+                    </p>
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('CCNA_SRWE')">
+                        📥 Télécharger le certificat
+                    </a>
+                </div>
+
+                <div class="cert-download-card" onclick="downloadCert('CCNA_ITN')">
+                    <h4>📕 CCNA: Introduction to Networks</h4>
+                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
+                        Fondamentaux des réseaux, protocoles TCP/IP et adressage
+                    </p>
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('CCNA_ITN')">
+                        📥 Télécharger le certificat
+                    </a>
+                </div>
+
+                <div class="cert-download-card" onclick="downloadCert('Intro_Cybersecurity')">
+                    <h4>🔒 Introduction to Cybersecurity</h4>
+                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
+                        Principes de cybersécurité et protection des systèmes
+                    </p>
+                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('Intro_Cybersecurity')">
+                        📥 Télécharger le certificat
+                    </a>
+                </div>
+            </div>
+
+            <div class="cert-card" style="margin-top: 40px;">
+                <h3>🎯 Parcours de certification</h3>
+                <p style="margin: 15px 0;">
+                    <strong>Formation complète Cisco Networking Academy</strong> couvrant l'ensemble 
+                    du curriculum CCNA et les fondamentaux de la cybersécurité.
+                </p>
+                <p><strong>Compétences validées :</strong></p>
+                <div style="margin-top: 15px;">
+                    <span class="tag">Configuration Cisco IOS</span>
+                    <span class="tag">Routage dynamique</span>
+                    <span class="tag">VLANs & Trunking</span>
+                    <span class="tag">ACLs</span>
+                    <span class="tag">NAT/PAT</span>
+                    <span class="tag">WLAN</span>
+                    <span class="tag">Sécurité réseau</span>
+                    <span class="tag">Automatisation</span>
+                    <span class="tag">Python pour réseaux</span>
+                </div>
             </div>
 
             <div class="cert-card">
-                <h3>📚 Cisco Networking Academy Courses</h3>
-                <p><strong>Modules complétés :</strong></p>
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>Introduction to Networks (ITN)</li>
-                    <li>Switching, Routing, and Wireless Essentials (SRWE)</li>
-                    <li>Enterprise Networking, Security, and Automation (ENSA)</li>
-                </ul>
-            </div>
-
-            <div class="cert-card">
-                <h3>🎯 Objectifs de certification</h3>
-                <p>Suite du parcours de certifications Cisco prévue :</p>
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>CCNP Enterprise - Prévu pour 2026</li>
-                    <li>Certifications en cybersécurité (CyberOps Associate)</li>
+                <h3>🚀 Objectifs futurs</h3>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li><strong>CCNA Certification</strong> - Prévu en 2025</li>
+                    <li><strong>CCNP Enterprise</strong> - Objectif 2026</li>
+                    <li><strong>CyberOps Associate</strong> - Spécialisation cybersécurité</li>
                 </ul>
             </div>
         </section>
@@ -427,7 +575,20 @@
         }
 
         function downloadCV() {
-            alert('Fonctionnalité de téléchargement du CV\n\nPour activer cette fonction, tu devras :\n1. Créer ton CV en PDF\n2. L\'héberger sur ton serveur\n3. Remplacer ce code par : window.location.href = "chemin/vers/ton/CV.pdf"');
+            window.location.href = 'CV_Hugo_Coston.pdf';
+        }
+
+        function downloadCert(certName) {
+            const certFiles = {
+                'CCNA_ENSA': 'certificates/CCNA_Enterprise_Networking_Security_Automation.pdf',
+                'CCNA_SRWE': 'certificates/CCNA_Switching_Routing_Wireless_Essentials.pdf',
+                'CCNA_ITN': 'certificates/CCNA_Introduction_to_Networks.pdf',
+                'Intro_Cybersecurity': 'certificates/Introduction_to_Cybersecurity.pdf'
+            };
+            
+            if (certFiles[certName]) {
+                window.location.href = certFiles[certName];
+            }
         }
 
         function handleSubmit(event) {
