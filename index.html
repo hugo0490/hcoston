@@ -105,6 +105,11 @@
             margin-bottom: 10px;
         }
 
+        h4 {
+            color: #667eea;
+            margin: 15px 0 10px 0;
+        }
+
         .hero {
             text-align: center;
             padding: 40px 0;
@@ -170,7 +175,8 @@
             min-height: 120px;
         }
 
-        .project-card,         .cert-card {
+        .project-card,
+        .cert-card {
             background: #f8f9fa;
             padding: 25px;
             margin: 20px 0;
@@ -299,6 +305,77 @@
             font-size: 1.1em;
         }
 
+        /* Styles pour les compétences */
+        .competence-block {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .competence-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .competence-percent {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s;
+        }
+
+        .competence-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .competence-category h4 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .competence-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .competence-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+        }
+
+        .competence-category li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -322,6 +399,10 @@
 
             h2 {
                 font-size: 1.5em;
+            }
+
+            .competence-details {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -372,6 +453,151 @@
                     <span class="tag">Protocoles réseau</span>
                 </div>
             </div>
+
+            <!-- SECTION COMPÉTENCES (MAINTENANT À L'INTÉRIEUR) -->
+            <h2 style="margin-top: 60px;">Mes Compétences</h2>
+            <p style="font-size: 1.05em; color: #666; margin-bottom: 30px;">
+                Voici une synthèse de mes compétences développées au cours de ma formation.
+            </p>
+
+            <!-- Bloc 1: Administrer les réseaux -->
+            <div class="competence-block">
+                <div class="competence-header">
+                    <h3 style="margin: 0; color: #667eea;">Administrer les réseaux et Internet</h3>
+                    <span class="competence-percent">75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <div class="competence-details">
+                    <div class="competence-category">
+                        <h4>💻 Windows Server</h4>
+                        <ul>
+                            <li>Windows Server 2019/2022/2025</li>
+                            <li>Active Directory, GPO</li>
+                            <li>DHCP, DNS, Partages réseaux</li>
+                            <li>Windows Client (10/11)</li>
+                        </ul>
+                    </div>
+                    <div class="competence-category">
+                        <h4>🐧 Linux</h4>
+                        <ul>
+                            <li>DNS, Samba, FTP</li>
+                            <li>SSH, Apache 2, DHCP</li>
+                            <li>Administration système</li>
+                            <li>Scripts Bash</li>
+                        </ul>
+                    </div>
+                    <div class="competence-category">
+                        <h4>🌐 Réseaux</h4>
+                        <ul>
+                            <li>Configuration Switches L2/L3</li>
+                            <li>Routage statique et dynamique</li>
+                            <li>OSPF, BGP, MPLS</li>
+                            <li>Gestion VLANs, Inter-VLAN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 2: Connecter les entreprises -->
+            <div class="competence-block">
+                <div class="competence-header">
+                    <h3 style="margin: 0; color: #667eea;">Connecter les entreprises</h3>
+                    <span class="competence-percent">70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+                <div class="competence-details">
+                    <div class="competence-category">
+                        <h4>📡 WiFi & Sans-fil</h4>
+                        <ul>
+                            <li>Configuration points d'accès</li>
+                            <li>Sécurité WPA2/WPA3</li>
+                            <li>VLANs sans-fil</li>
+                            <li>Contrôleurs WiFi</li>
+                        </ul>
+                    </div>
+                    <div class="competence-category">
+                        <h4>📱 4G/5G</h4>
+                        <ul>
+                            <li>Architecture réseaux mobiles</li>
+                            <li>Protocoles de télécommunications</li>
+                            <li>Technologies d'accès radio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 3: Créer des outils informatiques -->
+            <div class="competence-block">
+                <div class="competence-header">
+                    <h3 style="margin: 0; color: #667eea;">Créer des outils et applications informatiques</h3>
+                    <span class="competence-percent">65%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+                <div class="competence-details">
+                    <div class="competence-category">
+                        <h4>🌐 Développement Web</h4>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>PHP, MySQL</li>
+                            <li>Design responsive</li>
+                        </ul>
+                    </div>
+                    <div class="competence-category">
+                        <h4>🐍 Programmation</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Programmation Objet</li>
+                        </ul>
+                    </div>
+                    <div class="competence-category">
+                        <h4>📊 Bases de données</h4>
+                        <ul>
+                            <li>SQL (MySQL, PostgreSQL)</li>
+                            <li>Conception de BDD</li>
+                            <li>Requêtes complexes</li>
+                            <li>Administration BDD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 4: PILOTAGE DE PROJETS -->
+            <div class="competence-block" style="border-left-color: #9b59b6; background: linear-gradient(135deg, #9b59b615 0%, #667eea15 100%);">
+                <div class="competence-header">
+                    <h3 style="margin: 0; color: #9b59b6;">🎯 Piloter des projets (Spécialité PilPro)</h3>
+                    <span class="competence-percent" style="background: linear-gradient(135deg, #9b59b6 0%, #667eea 100%);">68%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="background: linear-gradient(90deg, #9b59b6 0%, #667eea 100%); width: 68%;"></div>
+                </div>
+                <div class="competence-details">
+                    <div class="competence-category">
+                        <h4>📋 Gestion de projet</h4>
+                        <ul>
+                            <li>Méthodologies Agile/Scrum</li>
+                            <li>Planification et suivi projet</li>
+                            <li>Gestion des risques</li>
+                            <li>Outils: Trello, Gantt</li>
+                        </ul>
+                    </div>
+                    <div class="competence-category">
+                        <h4>📈 Pilotage stratégique</h4>
+                        <ul>
+                            <li>Analyse besoins clients</li>
+                            <li>Budget et ROI</li>
+                            <li>KPIs et tableaux de bord</li>
+                            <li>Documentation projet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Section Projets -->
@@ -421,149 +647,7 @@
                 </div>
             </div>
         </section>
- <!-- SECTION COMPÉTENCES -->
-                <h2 style="margin-top: 60px;">Mes Compétences</h2>
-                <p style="font-size: 1.05em; color: #666; margin-bottom: 30px;">
-                    Voici une synthèse de mes compétences développées au cours de ma formation.
-                </p>
 
-                <!-- Bloc 1: Administrer les réseaux -->
-                <div class="competence-block">
-                    <div class="competence-header">
-                        <h3 style="margin: 0; color: #667eea;">Administrer les réseaux et Internet</h3>
-                        <span class="competence-percent">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%;"></div>
-                    </div>
-                    <div class="competence-details">
-                        <div class="competence-category">
-                            <h4>💻 Windows Server</h4>
-                            <ul>
-                                <li>Windows Server 2019/2022/2025</li>
-                                <li>Active Directory, GPO</li>
-                                <li>DHCP, DNS, Partages réseaux</li>
-                                <li>Windows Client (10/11)</li>
-                            </ul>
-                        </div>
-                        <div class="competence-category">
-                            <h4>🐧 Linux</h4>
-                            <ul>
-                                <li>DNS, Samba, FTP</li>
-                                <li>SSH, Apache 2, DHCP</li>
-                                <li>Administration système</li>
-                                <li>Scripts Bash</li>
-                            </ul>
-                        </div>
-                        <div class="competence-category">
-                            <h4>🌐 Réseaux</h4>
-                            <ul>
-                                <li>Configuration Switches L2/L3</li>
-                                <li>Routage statique et dynamique</li>
-                                <li>OSPF, BGP, MPLS</li>
-                                <li>Gestion VLANs, Inter-VLAN</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bloc 2: Connecter les entreprises -->
-                <div class="competence-block">
-                    <div class="competence-header">
-                        <h3 style="margin: 0; color: #667eea;">Connecter les entreprises</h3>
-                        <span class="competence-percent">70%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%;"></div>
-                    </div>
-                    <div class="competence-details">
-                        <div class="competence-category">
-                            <h4>📡 WiFi & Sans-fil</h4>
-                            <ul>
-                                <li>Configuration points d'accès</li>
-                                <li>Sécurité WPA2/WPA3</li>
-                                <li>VLANs sans-fil</li>
-                                <li>Contrôleurs WiFi</li>
-                            </ul>
-                        </div>
-                        <div class="competence-category">
-                            <h4>📱 4G/5G</h4>
-                            <ul>
-                                <li>Architecture réseaux mobiles</li>
-                                <li>Protocoles de télécommunications</li>
-                                <li>Technologies d'accès radio</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bloc 3: Créer des outils informatiques -->
-                <div class="competence-block">
-                    <div class="competence-header">
-                        <h3 style="margin: 0; color: #667eea;">Créer des outils et applications informatiques</h3>
-                        <span class="competence-percent">65%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 65%;"></div>
-                    </div>
-                    <div class="competence-details">
-                        <div class="competence-category">
-                            <h4>🌐 Développement Web</h4>
-                            <ul>
-                                <li>HTML, CSS, JavaScript</li>
-                                <li>PHP, MySQL</li>
-                                <li>Design responsive</li>
-                            </ul>
-                        </div>
-                        <div class="competence-category">
-                            <h4>🐍 Programmation</h4>
-                            <ul>
-                                <li>Python)</li>
-                                <li>Programmation Objet</li>
-                            </ul>
-                        </div>
-                        <div class="competence-category">
-                            <h4>📊 Bases de données</h4>
-                            <ul>
-                                <li>SQL (MySQL, PostgreSQL)</li>
-                                <li>Conception de BDD</li>
-                                <li>Requêtes complexes</li>
-                                <li>Administration BDD</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bloc 4: PILOTAGE DE PROJETS -->
-                <div class="competence-block" style="border-left-color: #9b59b6; background: linear-gradient(135deg, #9b59b615 0%, #667eea15 100%);">
-                    <div class="competence-header">
-                        <h3 style="margin: 0; color: #9b59b6;">🎯 Piloter des projets (Spécialité PilPro)</h3>
-                        <span class="competence-percent" style="background: linear-gradient(135deg, #9b59b6 0%, #667eea 100%);">68%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="background: linear-gradient(90deg, #9b59b6 0%, #667eea 100%); width: 68%;"></div>
-                    </div>
-                    <div class="competence-details">
-                        <div class="competence-category">
-                            <h4>📋 Gestion de projet</h4>
-                            <ul>
-                                <li>Méthodologies Agile/Scrum</li>
-                                <li>Planification et suivi projet</li>
-                                <li>Gestion des risques</li>
-                                <li>Outils: Trello, Gantt</li>
-                            </ul>
-                        </div>
-                        <div class="competence-category">
-                            <h4>📈 Pilotage stratégique</h4>
-                            <ul>
-                                <li>Analyse besoins clients</li>
-                                <li>Budget et ROI</li>
-                                <li>KPIs et tableaux de bord</li>
-                                <li>Documentation projet</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
         <!-- Section Certifications -->
         <section id="certifications" class="section">
             <h2>Certifications Cisco</h2>
@@ -677,8 +761,6 @@
                 window.location.href = certFiles[certName];
             }
         }
-
-       
     </script>
 </body>
 </html>
