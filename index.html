@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo Coston - Portfolio</title>
+    <title>Hugo Coston - Projets Professionnels</title>
     <style>
         * {
             margin: 0;
@@ -140,63 +140,6 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
-        .btn-small {
-            padding: 8px 15px;
-            font-size: 14px;
-            margin: 5px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 30px auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .project-card,
-        .cert-card {
-            background: #f8f9fa;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover, .cert-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        /* STYLES POUR ARTICLES PORTFOLIO */
         .portfolio-article {
             background: white;
             border: 2px solid #667eea;
@@ -253,7 +196,7 @@
 
         .portfolio-article.expanded .article-content {
             display: block;
-            max-height: 2000px;
+            max-height: 3000px;
         }
 
         .article-content h4 {
@@ -285,792 +228,786 @@
             display: inline-block;
         }
 
-        .competence-block {
-            background: #f8f9fa;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-        }
-
-        .competence-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .competence-percent {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #e0e0e0;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s;
-        }
-
-        .competence-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .competence-category h5 {
-            margin-top: 0;
-            color: #667eea;
-        }
-
-        .competence-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .competence-category li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-            color: #666;
-        }
-
-        .competence-category li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .badge-container {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin: 30px 0;
-            justify-content: center;
-        }
-
-        .badge-card {
-            background: white;
+        .learning-block {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            max-width: 250px;
+            margin: 20px 0;
+            border-radius: 8px;
         }
 
-        .badge-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-        }
-
-        .badge-card img {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 15px;
-        }
-
-        .badge-card h4 {
+        .learning-block strong {
             color: #667eea;
-            margin: 10px 0;
-            font-size: 1.1em;
         }
 
-        .badge-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .badge-link:hover {
-            color: #764ba2;
-        }
-
-        .cert-downloads {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .cert-download-card {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        .but-link {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
             padding: 20px;
-            border-radius: 12px;
-            border: 2px solid #667eea30;
-            transition: all 0.3s;
-            cursor: pointer;
+            margin: 20px 0;
+            border-radius: 8px;
         }
 
-        .cert-download-card:hover {
-            border-color: #667eea;
-            transform: scale(1.03);
-        }
-
-        .cert-download-card h4 {
-            color: #667eea;
+        .but-link h5 {
+            color: #d39e00;
             margin-bottom: 10px;
-            font-size: 1em;
         }
 
-        .download-btn {
-            background: white;
-            color: #667eea;
-            padding: 8px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: 600;
-            border: 2px solid #667eea;
-            transition: all 0.3s;
+        .but-link p {
+            color: #664d03;
+            margin-bottom: 10px;
         }
 
-        .download-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 14px;
-            margin: 5px 5px 5px 0;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin: 20px 0;
         }
 
-        .contact-info p {
-            margin: 10px 0;
-            font-size: 1.1em;
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
+        table th {
+            background: #667eea;
             color: white;
-            margin-top: 30px;
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
 
-            .section {
-                padding: 30px 20px;
-            }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
 
-            h1 {
-                font-size: 2em;
-            }
+        li {
+            margin-bottom: 8px;
+        }
 
-            h2 {
-                font-size: 1.5em;
-            }
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+        }
 
-            .competence-details {
-                grid-template-columns: 1fr;
-            }
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-            .article-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
 
-            .article-date {
-                margin-top: 10px;
-                margin-right: 0;
-            }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Hugo COSTON</div>
+            <div class="logo">Hugo Coston</div>
             <ul class="nav-links">
                 <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
-                <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
-                <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
+                <li><a href="#" onclick="showSection('projets')">Projets</a></li>
+                <li><a href="#" onclick="showSection('competences')">Compétences</a></li>
                 <li><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <!-- Section Accueil -->
-        <section id="accueil" class="section active">
+        <!-- SECTION ACCUEIL -->
+        <div id="accueil" class="section active">
             <div class="hero">
-                <h1>Hugo Coston</h1>
-                <p>Étudiant en 3ème année BUT Réseaux et Télécommunications</p>
-                <div>
-                    <a href="#" onclick="showSection('contact')" class="btn">Me contacter</a>
-                    <a href="#" onclick="downloadCV()" class="btn">Télécharger mon CV</a>
-                </div>
+                <h1>🎓 Portfolio Professionnel</h1>
+                <p>BUT Réseaux & Télécommunications - Spécialité Pilotage de Projet</p>
+                <p style="font-size: 1em; color: #999;">Explorer mes projets, apprentissages et évolution professionnelle</p>
+                <button class="btn" onclick="showSection('projets')">Découvrir mes projets</button>
             </div>
+        </div>
 
-            <div style="margin-top: 50px;">
-                <h2>À propos de moi</h2>
-                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 20px;">
-                    Actuellement en 3ème année de BUT Réseaux et Télécommunications spécialité Pilote de projet, 
-                    je développe mes compétences en administration réseau, sécurité informatique et infrastructures 
-                    de télécommunications. Ma formation me permet d'acquérir une expertise technique solide tout en 
-                    développant ma capacité à gérer des projets complexes dans le domaine des réseaux et des systèmes.
-                </p>
-                
-                <h3>Compétences techniques</h3>
-                <div>
-                    <span class="tag">Cisco IOS</span>
-                    <span class="tag">Routage & Switching</span>
-                    <span class="tag">TCP/IP</span>
-                    <span class="tag">VLANs</span>
-                    <span class="tag">Sécurité réseau</span>
-                    <span class="tag">Linux</span>
-                    <span class="tag">Windows Server</span>
-                    <span class="tag">Protocoles réseau</span>
-                </div>
-            </div>
-
-            <h2 style="margin-top: 60px;">Mes Compétences</h2>
-            <p style="font-size: 1.05em; color: #666; margin-bottom: 30px;">
-                Voici une synthèse de mes compétences développées au cours de ma formation.
+        <!-- SECTION PROJETS -->
+        <div id="projets" class="section">
+            <h2>📋 Mes Projets</h2>
+            <p style="margin-bottom: 30px; color: #666;">
+                Chaque projet ci-dessous représente une étape dans mon développement professionnel. 
+                J'y détaille non seulement ce que j'ai fait, mais surtout ce que j'en ai appris et comment cela renforce ma compréhension du BUT Réseaux & Télécommunications.
             </p>
 
-            <div class="competence-block">
-                <div class="competence-header">
-                    <h3 style="margin: 0; color: #667eea;">Administrer les réseaux et Internet</h3>
-                    <span class="competence-percent">75%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 75%;"></div>
-                </div>
-                <div class="competence-details">
-                    <div class="competence-category">
-                        <h5>💻 Windows Server</h5>
-                        <ul>
-                            <li>Windows Server 2019/2022/2025</li>
-                            <li>Active Directory, GPO</li>
-                            <li>DHCP, DNS, Partages réseaux</li>
-                            <li>Windows Client (10/11)</li>
-                        </ul>
-                    </div>
-                    <div class="competence-category">
-                        <h5>🐧 Linux</h5>
-                        <ul>
-                            <li>DNS, Samba, FTP</li>
-                            <li>SSH, Apache 2, DHCP</li>
-                            <li>Administration système</li>
-                            <li>Scripts Bash</li>
-                        </ul>
-                    </div>
-                    <div class="competence-category">
-                        <h5>🌐 Réseaux</h5>
-                        <ul>
-                            <li>Configuration Switches L2/L3</li>
-                            <li>Routage statique et dynamique</li>
-                            <li>OSPF, BGP, MPLS</li>
-                            <li>Gestion VLANs, Inter-VLAN</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="competence-block">
-                <div class="competence-header">
-                    <h3 style="margin: 0; color: #667eea;">Connecter les entreprises</h3>
-                    <span class="competence-percent">70%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 70%;"></div>
-                </div>
-                <div class="competence-details">
-                    <div class="competence-category">
-                        <h5>📡 WiFi & Sans-fil</h5>
-                        <ul>
-                            <li>Configuration points d'accès</li>
-                            <li>Sécurité WPA2/WPA3</li>
-                            <li>VLANs sans-fil</li>
-                            <li>Contrôleurs WiFi</li>
-                        </ul>
-                    </div>
-                    <div class="competence-category">
-                        <h5>📱 4G/5G</h5>
-                        <ul>
-                            <li>Architecture réseaux mobiles</li>
-                            <li>Protocoles de télécommunications</li>
-                            <li>Technologies d'accès radio</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="competence-block">
-                <div class="competence-header">
-                    <h3 style="margin: 0; color: #667eea;">Créer des outils et applications informatiques</h3>
-                    <span class="competence-percent">65%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 65%;"></div>
-                </div>
-                <div class="competence-details">
-                    <div class="competence-category">
-                        <h5>🌐 Développement Web</h5>
-                        <ul>
-                            <li>HTML, CSS, JavaScript</li>
-                            <li>PHP, MySQL</li>
-                            <li>Design responsive</li>
-                        </ul>
-                    </div>
-                    <div class="competence-category">
-                        <h5>🐍 Programmation</h5>
-                        <ul>
-                            <li>Python</li>
-                            <li>Programmation Objet</li>
-                        </ul>
-                    </div>
-                    <div class="competence-category">
-                        <h5>📊 Bases de données</h5>
-                        <ul>
-                            <li>SQL (MySQL, PostgreSQL)</li>
-                            <li>Conception de BDD</li>
-                            <li>Requêtes complexes</li>
-                            <li>Administration BDD</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="competence-block" style="border-left-color: #9b59b6; background: linear-gradient(135deg, #9b59b615 0%, #667eea15 100%);">
-                <div class="competence-header">
-                    <h3 style="margin: 0; color: #9b59b6;">🎯 Piloter des projets (Spécialité PilPro)</h3>
-                    <span class="competence-percent" style="background: linear-gradient(135deg, #9b59b6 0%, #667eea 100%);">68%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="background: linear-gradient(90deg, #9b59b6 0%, #667eea 100%); width: 68%;"></div>
-                </div>
-                <div class="competence-details">
-                    <div class="competence-category">
-                        <h5>📋 Gestion de projet</h5>
-                        <ul>
-                            <li>Méthodologies Agile/Scrum</li>
-                            <li>Planification et suivi projet</li>
-                            <li>Gestion des risques</li>
-                            <li>Outils: Trello, Gantt</li>
-                        </ul>
-                    </div>
-                    <div class="competence-category">
-                        <h5>📈 Pilotage stratégique</h5>
-                        <ul>
-                            <li>Analyse besoins clients</li>
-                            <li>Budget et ROI</li>
-                            <li>KPIs et tableaux de bord</li>
-                            <li>Documentation projet</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-      
-        <!-- : PORTFOLIO ARTICLES -->
-        <section id="portfolio" class="section">
-            <h2>Mon Portfolio </h2>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 30px; text-align: center;">
-                Découvrez mes apprentissages clés tirés de mes expériences académiques et professionnelles.
-                Chaque article explore une dimension différente de ma formation en gestion de projet et réseaux.
-            </p>
-
-            <!-- Article 1: Orange -->
+            <!-- PROJET 1: VISITE ORANGE SELONCOURT -->
             <div class="portfolio-article" onclick="toggleArticle(this)">
                 <div class="article-header">
-                    <h3>Plongée au cœur des réseaux</h3>
+                    <h3>🏢 Orange Seloncourt - Visite du Central Téléphonique</h3>
                     <span class="article-date">Octobre 2025</span>
                     <span class="expand-icon">▼</span>
                 </div>
                 <div class="article-content">
-                    <h4>Infrastructure et enjeux de transition technologique</h4>
+                    <div class="article-tags">
+                        <span class="article-tag">Infrastructure Réseau</span>
+                        <span class="article-tag">Télécommunications</span>
+                        <span class="article-tag">Pilotage de Projet</span>
+                        <span class="article-tag">Leadership</span>
+                    </div>
+
+                    <h4>📌 Contexte</h4>
                     <p>
-                        En octobre 2025, dans le cadre de notre formation en gestion de projet au sein du BUT Réseaux & Télécommunications, 
-                        nous avons eu l'opportunité exceptionnelle de visiter le central téléphonique de Seloncourt. 
-                        Ce site stratégique, souvent méconnu du grand public, incarne l'un des défis majeurs de notre époque : 
-                        la transition numérique d'une infrastructure héritée du modèle ADSL vers les réseaux très haut débit par fibre optique.
+                        Visite pédagogique du central téléphonique d'Orange à Seloncourt, gérant la transition d'une 
+                        infrastructure ADSL héritée (réseaux cuivre) vers les réseaux très haut débit par fibre optique.
                     </p>
 
-                    <h4>La complexité invisible de nos connexions quotidiennes</h4>
+                    <h4>🔍 Ce que j'ai compris en profondeur</h4>
+
+                    <h5>1. La complexité opérationnelle dépasse la configuration technique</h5>
                     <p>
-                        Cette visite n'était pas une simple découverte touristique, mais une immersion pédagogique dans les réalités 
-                        opérationnelles d'un projet de transformation infrastructurelle de grande envergure. Le central de Seloncourt 
-                        m'a frappé par trois réalités souvent occultées en académie :
+                        Le central doit supporter simultanément l'infrastructure cuivre ADSL existante (pour les clients non éligibles), 
+                        le déploiement progressif de la fibre optique, <strong>avec zéro rupture de service</strong>. 
+                        Ce n'est pas qu'une question de routeurs et de commutateurs ; c'est orchestrer une transition massive 
+                        en gardant tous les clients connectés.
                     </p>
-                    <p style="margin-left: 20px; border-left: 3px solid #667eea; padding-left: 20px;">
-                        <strong>1. La complexité de la coexistence technique.</strong> Le site doit simultanément supporter le réseau cuivre 
-                        ADSL existant (toujours actif pour les clients non éligibles à la fibre) tout en déployant progressivement 
-                        l'infrastructure de fibre optique. Cette transition n'est pas instantanée : elle demande une orchestration 
-                        précise pour éviter les ruptures de service.<br><br>
-                        <strong>2. L'importance de la coordination multidisciplinaire.</strong> Bien au-delà des ingénieurs électroniciens, 
-                        le projet repose sur des génie-civilistes, des agents de terrain, des responsables qualité, des chefs de projet. 
-                        La réussite technique dépend de la communication entre ces acteurs.<br><br>
-                        <strong>3. L'infrastructure comme enjeu stratégique.</strong> Ces centraux déterminent qui a accès aux services 
-                        numériques et à quelle qualité. Le déploiement de la fibre n'est pas qu'une amélioration technologique : 
-                        c'est une question d'équité territoriale.
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Apprentissage :</strong> En tant que futur responsable d'infrastructure, je dois comprendre que 
+                        la vraie contrainte n'est pas technologique, mais opérationnelle. Comment déployer sans casser ? 
+                        Comment planifier pour l'incertitude (des clients rebelles, des équipes débordées, des délais qui glissent) ?
                     </p>
 
-                    <h4>Apprentissage clé</h4>
+                    <h5>2. La coordination multidisciplinaire est le succès réel</h5>
                     <p>
-                        Pour un futur chef de projet IT, cette immersion m'a rappelé une vérité fondamentale : 
-                        je ne peux pas piloter efficacement ce que je ne comprends pas physiquement et stratégiquement.
+                        Le succès dépend de la synergie entre ingénieurs réseaux, génie-civil (installation physique), 
+                        agents de terrain, responsables qualité et chefs de projet. Chacun a des priorités différentes, 
+                        des contraintes différentes, des langages différents.
                     </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Apprentissage :</strong> Une infrastructure technique n'existe que si les équipes humaines 
+                        derrière fonctionnent de manière alignée. La communication est aussi critique que la technologie. 
+                        Comme futur chef de projet, je dois être capable de traduire entre les disciplines.
+                    </p>
+
+                    <h5>3. L'infrastructure réseau est un enjeu stratégique, pas juste technique</h5>
+                    <p>
+                        Ces centraux déterminent qui a accès aux services numériques, définissent la qualité de connexion par territoire, 
+                        représentent un enjeu d'équité territoriale (zones urbaines vs. rurales), influencent l'attractivité économique.
+                    </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Apprentissage :</strong> Je ne peux pas piloter ce que je ne comprends pas au-delà des specs techniques. 
+                        Comprendre le contexte stratégique (enjeux régionaux, équité numérique, décisions gouvernementales) 
+                        est aussi important que maîtriser OSPF ou BGP.
+                    </p>
+
+                    <div class="but-link">
+                        <h5>🎓 Lien avec mon BUT Réseaux & Télécommunications</h5>
+                        <p>
+                            <strong>Compétences du programme mobilisées :</strong>
+                        </p>
+                        <ul>
+                            <li><strong>AC31.01 :</strong> Concevoir un projet de réseau informatique en intégrant haute disponibilité, QoS, sécurité
+                            <br><em>→ Observation concrète d'une architecture multi-couches avec redondance et surveillance continue</em></li>
+                            <li><strong>AC32.02 :</strong> Analyser l'impact des technologies sur les modes d'organisation
+                            <br><em>→ Compréhension comment la transition fibre impacte l'organisation du travail et les compétences requises</em></li>
+                            <li><strong>AC33.03 :</strong> Communiquer efficacement pour mobiliser et convaincre
+                            <br><em>→ Prise de conscience que piloter des changements technologiques exige une communication multidisciplinaire</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-block">
+                        <h5>💡 Apprentissage critique pour mon avenir professionnel</h5>
+                        <p>
+                            <strong>Pour un futur chef de projet IT ou responsable d'infrastructure, je ne peux pas rester dans la tour d'ivoire technique.</strong>
+                        </p>
+                        <p>Cela signifie concrètement :</p>
+                        <ul>
+                            <li>Aller voir le terrain, pas rester dans la théorie</li>
+                            <li>Comprendre les enjeux au-delà de la fiche technique</li>
+                            <li>Écouter les équipes qui connaissent les contraintes réelles</li>
+                            <li>Intégrer la complexité opérationnelle dès la phase de planification</li>
+                            <li>Accepter que la vraie difficulté n'est jamais technologique, toujours organisationnelle</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Article 2: SAE 5.02 -->
+            <!-- PROJET 2: SAE 5.02 GESTION DE PROJET -->
             <div class="portfolio-article" onclick="toggleArticle(this)">
                 <div class="article-header">
-                    <h3> SAE 5.02 : Gérer un projet réseau sous contrainte</h3>
+                    <h3>🔧 SAE 5.02 - Gestion de Projet Infrastructure Hôpital de Campagne</h3>
                     <span class="article-date">Janvier 2026</span>
                     <span class="expand-icon">▼</span>
                 </div>
                 <div class="article-content">
-                    <h4>De la théorie à la livraison</h4>
+                    <div class="article-tags">
+                        <span class="article-tag">Cisco Routing</span>
+                        <span class="article-tag">OSPF</span>
+                        <span class="article-tag">Gestion de Projet</span>
+                        <span class="article-tag">Leadership Technique</span>
+                        <span class="article-tag">Trello</span>
+                    </div>
+
+                    <h4>📌 Contexte</h4>
                     <p>
-                        Dans le cadre de la SAÉ 5.02 « Piloter un projet informatique », 
-                        j'ai eu à concevoir et déployer une infrastructure réseau complète pour un hôpital de campagne fictif. 
-                        Sur le papier, c'était un exercice académique parmi d'autres. En réalité, ça a été mon premier vrai test 
-                        en tant que chef de projet.
+                        <strong>Rôle :</strong> Chef de projet (leadership technique et organisationnel)<br>
+                        <strong>Équipe :</strong> 4-5 personnes<br>
+                        <strong>Durée :</strong> 3-4 semaines<br>
+                        <strong>Objectif :</strong> Concevoir et déployer une infrastructure réseau complète pour un hôpital de campagne fictif, 
+                        avec documentation et production fonctionnelle
                     </p>
 
-                    <h4>Le problème initial : organisation vs. chaos</h4>
+                    <h4>⚠️ Le défi initial : Chaos organisé</h4>
                     <p>
-                        Les premières 48 heures ont mis en évidence un risque majeur. Chacun savait ce qu'il devait faire techniquement 
-                        (configurer Cisco, implémenter OSPF, mettre en place la sécurité). Mais personne n'avait de vue d'ensemble sur :
+                        Les 48 premières heures ont révélé un risque majeur :
                     </p>
-                    <ul style="margin-left: 20px; margin-bottom: 15px;">
-                        <li>Qui faisait quoi et à quel stade ?</li>
-                        <li>Comment nos travaux s'articulaient-ils ?</li>
-                        <li>Quels étaient les goulots d'étranglement critiques ?</li>
-                        <li>Comment ajustions-nous si quelque chose prenait plus de temps que prévu ?</li>
+                    <ul>
+                        <li>✅ Chacun savait <strong>quoi faire</strong> techniquement (configurer Cisco, implémenter OSPF, sécuriser)</li>
+                        <li>❌ <strong>Personne n'avait de vue d'ensemble</strong> : qui faisait quoi, comment les tâches s'articulaient, 
+                        quels étaient les goulots d'étranglement, comment ajuster si quelque chose prenait plus de temps</li>
                     </ul>
 
-                    <h4>Ma réponse : Structure simple, impact maximal</h4>
+                    <h4>📊 Ma réponse : Structure simple, impact maximal</h4>
                     <p>
-                        J'ai décidé de mettre en place un système de gestion de projet léger mais rigoureux, centré sur trois éléments : 
-                        <strong>visibilité, responsabilité et feedback régulier</strong>.
+                        J'ai mis en place un système de gestion de projet léger mais rigoureux, centré sur 
+                        <strong>3 piliers : visibilité, responsabilité et feedback régulier.</strong>
                     </p>
 
-                    <p><strong>1. Trello pour la clarté permanente</strong></p>
-                    <p style="margin-left: 20px;">
-                        J'ai créé un tableau Trello avec 5 colonnes : À faire → En cours → En test → En relecture → Terminé. 
-                        Chaque tâche avait une description claire, une personne responsable, une deadline. 
-                        Résultat : chacun savait où on en était, à tout moment.
-                    </p>
-
-                    <p><strong>2. Réunions courtes et fréquentes (15 min, tous les jours)</strong></p>
-                    <p style="margin-left: 20px;">
-                        Chaque matin, 15 minutes: « Qu'avez-vous fait ? Qu'allez-vous faire ? Quels blocages ? » 
-                        C'était spartiate, efficace. Les problèmes remontaient rapidement et se résolvaient dans les 5 minutes qui suivaient.
-                    </p>
-
-                    <p><strong>3. Ajustement continu du planning</strong></p>
-                    <p style="margin-left: 20px;">
-                        Contrairement à un planning rigide, on se réservait du temps à la fin de chaque jour pour 
-                        évaluer la progression réelle vs. prévue et réallouer les ressources si nécessaire.
-                    </p>
-
-                    <h4>Résultats : nous avons livré dans les délais</h4>
+                    <h5>1. Trello pour la visibilité permanente</h5>
                     <p>
-                        À la deadline, nous avions : architecture réseau complète et fonctionnelle ✓, 
-                        haute disponibilité implémentée ✓, sécurité en place ✓, documentation suffisante ✓. 
-                        Pas de panique last minute.
+                        Structure du tableau : À faire → En cours → En test → En relecture → Terminé
                     </p>
+                    <p>
+                        Chaque tâche incluait description claire des dépendances, personne responsable assignée, deadline spécifique, priorité.
+                    </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Résultat :</strong> Tout le monde savait où on en était, à tout moment. Pas de surprises, pas de travail dupliqué. 
+                        Pas de "je pensais que tu l'avais fait".
+                    </p>
+
+                    <h5>2. Standups quotidiens (15 min, rigoureux)</h5>
+                    <p>
+                        Format standardisé :
+                    </p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>"Qu'avez-vous terminé hier ?"</strong> → Validation des complétions</li>
+                        <li><strong>"Qu'allez-vous faire aujourd'hui ?"</strong> → Clarté sur les objectifs</li>
+                        <li><strong>"Quels blocages ?"</strong> → Identification immédiate des problèmes</li>
+                    </ul>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Culture :</strong> Pas de réunion longue, pas de PowerPoint. Du factuel, de l'action. 
+                        Résultat : les problèmes remontaient rapidement et se résolvaient dans les 5 minutes qui suivaient.
+                    </p>
+
+                    <h5>3. Ajustement continu du planning (feedback boucle courte)</h5>
+                    <p>
+                        Contrairement à un Gantt rigide (Waterfall), chaque fin de journée évaluation progression réelle vs. prévue, 
+                        identification des retards potentiels, réallocation des ressources si nécessaire, ajustement du planning pour les jours suivants.
+                    </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Résultat :</strong> Flexibilité sans chaos. On restait proactif, pas réactif. 
+                        On anticipait les problèmes au lieu de les gérer en crise.
+                    </p>
+
+                    <h4>✅ Résultats concrets à la deadline</h4>
+                    <table>
+                        <tr>
+                            <th>Livrable</th>
+                            <th>Statut</th>
+                            <th>Impact</th>
+                        </tr>
+                        <tr>
+                            <td>Architecture réseau complète et fonctionnelle</td>
+                            <td>✅ Conforme</td>
+                            <td>Zero downtime, tous les services actifs</td>
+                        </tr>
+                        <tr>
+                            <td>Haute disponibilité (OSPF, redondance)</td>
+                            <td>✅ Implémentée</td>
+                            <td>Basculement automatique en cas de panne</td>
+                        </tr>
+                        <tr>
+                            <td>Sécurité (ACL, segmentation)</td>
+                            <td>✅ En place</td>
+                            <td>Données sensibles isolées, filtrage des flux</td>
+                        </tr>
+                        <tr>
+                            <td>Documentation</td>
+                            <td>✅ Suffisante</td>
+                            <td>Maintenance future possible</td>
+                        </tr>
+                        <tr>
+                            <td>Incidents last-minute</td>
+                            <td>❌ Zéro</td>
+                            <td>Aucune panique, livraison sereine</td>
+                        </tr>
+                    </table>
+
+                    <p><strong>Feedback de l'équipe :</strong> <em>"C'était du chaos pendant les 2 premières semaines, 
+                    puis tu as mis de l'ordre et ça a été fluide."</em></p>
+
+                    <div class="but-link">
+                        <h5>🎓 Lien avec mon BUT Réseaux & Télécommunications</h5>
+                        <p>
+                            <strong>Compétences du programme mobilisées :</strong>
+                        </p>
+                        <ul>
+                            <li><strong>AC31.01 :</strong> Concevoir un projet de réseau informatique en intégrant haute disponibilité, QoS, sécurité
+                            <br><em>→ Conception concrète : architecture VLAN, routage OSPF, ACL de sécurité, QoS pour services critiques</em></li>
+                            <li><strong>AC31.06 :</strong> Gérer le projet et les différentes étapes de sa mise en œuvre en respectant les délais
+                            <br><em>→ Utilisation de Trello, standups quotidiens, tracking des dépendances, livraison dans les délais prévus</em></li>
+                            <li><strong>AC33.01 :</strong> Piloter des équipes en créant un environnement de confiance
+                            <br><em>→ Clarté des responsabilités, soutien en cas de blocage, reconnaissance des efforts</em></li>
+                            <li><strong>AC33.02 :</strong> Mettre en place un environnement de travail collaboratif
+                            <br><em>→ Standups réguliers, clarté des responsabilités, réactivité aux blocages</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-block">
+                        <h5>💡 Apprentissage critique : La gestion repose sur 3 piliers</h5>
+                        <p>
+                            <strong>Visibilité + Responsabilité + Feedback = Succès du projet</strong>
+                        </p>
+                        <p>
+                            La plupart des projets IT échouent non pas par incapacité technique, 
+                            mais par <strong>manque de visibilité</strong> (personne ne sait où on en est), 
+                            <strong>ambiguïté des responsabilités</strong> (qui fait quoi ?), 
+                            et <strong>feedback trop tard</strong> (on découvre les problèmes à la fin).
+                        </p>
+                        <p style="margin-top: 15px;"><strong>Pour mon avenir professionnel :</strong></p>
+                        <ul>
+                            <li>Utiliser des outils simples qui forcent à clarifier (Trello > Asana complexe)</li>
+                            <li>Chaque personne doit savoir exactement ce qu'elle doit livrer et quand</li>
+                            <li>Communication courte et fréquente > rapports longs et rares</li>
+                            <li>Adapter le planning en continu, pas ignorer les réalités du terrain</li>
+                            <li>La rigueur administrative et l'humanité ne sont pas opposées, elles se renforcent</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Article 3: Prud'hommes -->
+            <!-- PROJET 3: PRUD'HOMMES -->
             <div class="portfolio-article" onclick="toggleArticle(this)">
                 <div class="article-header">
-                    <h3>Les Prud’hommes : quand l’écoute devient un levier de management</h3>
+                    <h3>⚖️ Visite aux Prud'hommes - L'écoute comme levier de management</h3>
                     <span class="article-date">Octobre 2025</span>
                     <span class="expand-icon">▼</span>
                 </div>
                 <div class="article-content">
-                    <h4>Comprendre les règles du travail</h4>
+                    <div class="article-tags">
+                        <span class="article-tag">Management Équipe</span>
+                        <span class="article-tag">Communication</span>
+                        <span class="article-tag">Leadership</span>
+                        <span class="article-tag">Gestion de Conflits</span>
+                    </div>
+
+                    <h4>📌 Contexte</h4>
                     <p>
-                        Le 3 octobre 2025, avec ma promotion du BUT Réseaux & Télécommunications,
-                        nous avons passé une journée aux Prud’hommes de Montbéliard.
-                        Une expérience qui, à première vue, semblait éloignée de nos études technologiques. Et pourtant.
+                        Visite pédagogique au tribunal des Prud'hommes de Montbéliard dans le cadre du cours 
+                        "Management et pilotage d'équipes" de mon BUT. À première vue, une expérience éloignée 
+                        de mes études technologiques. Et pourtant, profondément pertinente.
                     </p>
 
-                    <h4>La structure du dialogue</h4>
+                    <h4>🔍 Ce que j'ai observé en profondeur</h4>
+
+                    <h5>La structure du dialogue : Écoute avant jugement</h5>
                     <p>
-                        En parcourant les couloirs du tribunal, j’ai pris conscience d’une réalité essentielle :
-                        les enjeux du travail ne sont pas abstraits. Ce sont des situations concrètes, des tensions humaines,
-                        des incompréhensions qui, faute d’avoir été traitées, se sont transformées en conflits.
+                        En parcourant les couloirs du tribunal, j'ai compris une réalité essentielle : 
+                        les enjeux du travail ne sont pas abstraits. Ce sont des situations concrètes, 
+                        des tensions humaines, des incompréhensions qui, faute d'avoir été traitées, 
+                        se cristallisent en conflits.
+                    </p>
+                    <p>
+                        Ce qui m'a particulièrement marqué : <strong>les assesseurs ne cherchaient pas à juger, 
+                        mais à comprendre</strong>. Structure de chaque jugement : 2 représentants des salariés, 
+                        2 des employeurs, face à face dans une logique d'équilibre (pas de hiérarchie). 
+                        Les avocats exposaient les faits, mais l'essentiel résidait ailleurs : 
+                        <strong>écouter, recouper les versions, reconstruire ce qui s'était réellement produit</strong>.
                     </p>
 
-                    <p>
-                        Ce qui m’a particulièrement marqué, c’est que les assesseurs ne cherchaient pas à juger, mais à comprendre.
-                        Deux représentants des salariés et deux représentants des employeurs, réunis dans une logique d’équilibre.
-                        Les avocats exposaient les faits, mais l’essentiel résidait ailleurs : écouter, recouper les versions,
-                        et reconstruire ce qui s’était réellement produit.
+                    <h5>Le cycle de détérioration dans une équipe (si on ignore les signaux)</h5>
+                    <p style="text-align: center; margin: 20px 0; font-weight: bold;">
+                        Manque de clarté sur les responsabilités
+                        <br>↓
+                        <br>Ressentiment silencieux
+                        <br>↓
+                        <br>Incompréhension non traitée
+                        <br>↓
+                        <br>Perte de confiance
+                        <br>↓
+                        <br>Incident technique ou humain
+                        <br>↓
+                        <br>Crise en fin de projet
+                        <br>↓
+                        <br>Conflit ouvert (dans les Prud'hommes)
                     </p>
 
-                    <h4>Le lien avec le management de projet IT</h4>
-                    <p>
-                        En débutant cette formation, je pensais que piloter un projet informatique consistait principalement à :
-                    </p>
-                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <h4>🔗 Le lien direct avec le management de projet IT</h4>
+
+                    <h5>Avant cette visite, je pensais que piloter consistait à :</h5>
+                    <ul>
                         <li>Planifier les tâches sur un outil (Trello, Asana)</li>
                         <li>Allouer les ressources efficacement</li>
                         <li>Respecter les délais et les budgets</li>
-                        <li>Produire des livrables conformes</li>
+                        <li>Produire les livrables conformes</li>
                     </ul>
 
-                        <p>
-                            Mais aux Prud’hommes, j’ai compris qu’elle omet une dimension fondamentale :
-                            <strong>la prévention des conflits par la qualité du dialogue.</strong>
-                        </p>
-                        
-                        <p style="margin-left: 20px; border-left: 3px solid #667eea; padding-left: 20px; margin-bottom: 20px;">
-                            Dans une équipe projet IT :<br>
-                            • Un manque de clarté sur les responsabilités génère du ressentiment<br>
-                            • Une décision imposée sans concertation crée des tensions<br>
-                            • Une absence d’écoute nourrit l’incompréhension<br>
-                            • Et une incompréhension non traitée devient un incident, puis une crise, et enfin un conflit
-                        </p>
-                        
-                        <h4>Vers un nouveau modèle de leadership technique</h4>
-                        
-                        <p>
-                            Pour un futur chef de projet IT, cette expérience met en lumière une évidence :
-                            <strong>la réussite d’un projet repose autant sur la gestion humaine que sur la maîtrise technique.</strong>
-                        </p>
-                        
-                        <p>
-                            Préserver la confiance, clarifier les échanges et instaurer un dialogue constant
-                            sont des compétences aussi stratégiques que la planification ou le suivi budgétaire.
-                        </p>
+                    <h5>Après les Prud'hommes, j'ai compris qu'il manquait une dimension fondamentale :</h5>
+                    <p style="margin-left: 20px; font-weight: bold; color: #667eea;">
+                        La prévention des conflits par la qualité du dialogue.
+                    </p>
 
+                    <h4>📋 Application concrète en tant que chef de projet</h4>
+                    <p>Pour prévenir les tensions avant qu'elles ne deviennent des crises :</p>
+
+                    <table>
+                        <tr>
+                            <th>Principe</th>
+                            <th>Mise en œuvre</th>
+                            <th>Bénéfice</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Clarté absolue</strong></td>
+                            <td>Chaque rôle, responsabilité, deadline clairement énoncés (pas d'ambiguïté)</td>
+                            <td>Évite les quiproquos, les frustrations silencieuses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Écoute régulière</strong></td>
+                            <td>Demander activement "Y a-t-il quelque chose qui te bloque ou te préoccupe ?"</td>
+                            <td>Les problèmes remontent tôt, avant de s'aggraver</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Résolution rapide</strong></td>
+                            <td>Traiter les tensions dès qu'elles émergent, pas plus tard</td>
+                            <td>Confiance maintenue, pas d'amertume</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transparence</strong></td>
+                            <td>Expliquer le "pourquoi" derrière les décisions, pas seulement le "quoi"</td>
+                            <td>L'équipe comprend les arbitrages, se sent entendue</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Confiance basée sur l'écoute</strong></td>
+                            <td>Montrer qu'on écoute vraiment, qu'on ne juge pas</td>
+                            <td>L'équipe ose parler, les problèmes émergent sans fear</td>
+                        </tr>
+                    </table>
+
+                    <div class="but-link">
+                        <h5>🎓 Lien avec mon BUT Réseaux & Télécommunications</h5>
+                        <p>
+                            <strong>Compétences du programme mobilisées :</strong>
+                        </p>
+                        <ul>
+                            <li><strong>AC33.01 :</strong> Piloter des équipes en créant un environnement de confiance
+                            <br><em>→ Compréhension que la confiance est le précondition du succès du projet, basée sur l'écoute active</em></li>
+                            <li><strong>AC33.02 :</strong> Mettre en place un environnement de travail collaboratif
+                            <br><em>→ Reconnaissance que la collaboration repose sur la clarté, la transparence et le dialogue</em></li>
+                            <li><strong>AC33.03 :</strong> Communiquer efficacement pour mobiliser, convaincre
+                            <br><em>→ Prise de conscience que communiquer = écouter d'abord, puis partager</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-block">
+                        <h5>💡 Apprentissage critique : La réussite d'un projet dépend de la gestion humaine</h5>
+                        <p>
+                            <strong>La qualité technique est nécessaire mais pas suffisante.</strong> 
+                            Un projet peut avoir une belle architecture mais échouer par dysfonctionnement humain. 
+                            L'inverse est aussi vrai : une équipe unie peut surmonter les défis techniques.
+                        </p>
+                        <p style="margin-top: 15px;"><strong>Compétences critiques souvent oubliées :</strong></p>
+                        <ul>
+                            <li>Préserver la confiance (hard to build, easy to break)</li>
+                            <li>Clarifier les échanges avant qu'ils ne deviennent ambigus</li>
+                            <li>Instaurer un dialogue constant (pas de feedback annuel, trop tard)</li>
+                            <li>Traiter les tensions avant qu'elles ne deviennent des crises</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>Pour mon avenir :</strong> Ces compétences humaines 
+                        sont aussi stratégiques que la planification ou le suivi budgétaire. Un bon chef de projet doit 
+                        maîtriser les deux. La plupart des chefs de projet se concentrent sur les outils (Gantt, budgets) 
+                        et oublient les humains. J'ai décidé de faire l'inverse : outils simples, humanité au cœur.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Article 4: CESIM -->
+            <!-- PROJET 4: CESIM -->
             <div class="portfolio-article" onclick="toggleArticle(this)">
                 <div class="article-header">
-                    <h3> CESIM Business Simulation : Gérer une entreprise</h3>
+                    <h3>💰 CESIM - Piloter une Entreprise dans l'Incertitude</h3>
                     <span class="article-date">Janvier 2026</span>
                     <span class="expand-icon">▼</span>
                 </div>
                 <div class="article-content">
-                    <h4>Arbitrer entre des objectifs contradictoires</h4>
+                    <div class="article-tags">
+                        <span class="article-tag">Stratégie Entreprise</span>
+                        <span class="article-tag">Décision en Incertitude</span>
+                        <span class="article-tag">Arbitrage Stratégique</span>
+                        <span class="article-tag">Leadership Collectif</span>
+                    </div>
+
+                    <h4>📌 Contexte</h4>
                     <p>
-                        La simulation d'entreprise CESIM est devenue pour moi bien plus qu'un exercice académique. 
-                        Sur 12 années virtuels, j'ai copiloté une entreprise fictive AmberVault, un fabricant de téléphones mobiles
-                        face à la volatilité des marchés, la pression des actionnaires et les contraintes budgétaires réelles.
+                        <strong>Simulation d'entreprise CESIM (12 trimestres virtuels)</strong><br>
+                        Rôle : Co-pilote dans la gestion stratégique d'une entreprise fictive<br>
+                        Entreprise : Amber Vault (fabricant de téléphones mobiles)<br>
+                        Contexte : Marché volatile, concurrence féroce, pressions des actionnaires
                     </p>
 
+                    <h4>⚠️ Le défi : Arbitrer l'arbitrable</h4>
                     <p>
-                        C'était fascinant et humiliant à la fois.
+                        Amber Vault avait un positionnement intermédiaire : pas le meilleur en volume, 
+                        mais marge supérieure à la concurrence. L'équipe devait choisir continuellement 
+                        entre deux stratégies opposées.
                     </p>
 
-                    <h4>Les vraies tensions du management</h4>
+                    <h4>📊 Les arbitrages impossibles (et ce qu'ils enseignent)</h4>
+
+                    <h5>Trimestre 1-3 : La stratégie de prix</h5>
+                    <p><strong>Décision :</strong> Baisse des prix pour attirer plus de clients</p>
+                    <p><strong>Résultat :</strong> Parts de marché en hausse (excellent !), marge comprimée (problème)</p>
+                    <p><strong>Tension :</strong> Croissance vs. Profitabilité</p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Apprentissage :</strong> Il n'existe pas de "bonne décision" abstraite. 
+                        Chaque choix a des conséquences court terme ET long terme. 
+                        Les métriques court terme (parts de marché) masquaient un problème structurel (marge rongée).
+                    </p>
+
+                    <h5>Trimestre 4-6 : L'innovation coûteuse</h5>
+                    <p><strong>Décision :</strong> Investir dans de nouveaux modèles avec spécifications plus avancées</p>
+                    <p><strong>Résultat :</strong> Coûts de production en hausse, délais de mise au marché, risque d'obsolescence</p>
+                    <p><strong>Tension :</strong> Innovation vs. Réduction de coûts</p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Apprentissage :</strong> L'innovation n'est jamais gratuite. 
+                        Il faut arbitrer : innovons-nous pour leadership technologique (long terme) 
+                        ou optimisons-nous les coûts (court terme) ?
+                    </p>
+
+                    <h5>Trimestre 7-10 : L'expansion géographique</h5>
+                    <p><strong>Décision :</strong> Doubler la présence en Asie</p>
+                    <p><strong>Résultat :</strong> Position Asie renforcée, coûts logistiques considérables, concurrence féroce</p>
+                    <p><strong>Tension :</strong> Expansion vs. Rentabilité régionale</p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Apprentissage :</strong> La croissance rapide crée ses propres problèmes 
+                        (coûts de logistique, complexité organisationnelle, compétences manquantes). 
+                        Croître n'est pas toujours la bonne réponse.
+                    </p>
+
+                    <h4>🎓 Ce que CESIM m'a vraiment appris</h4>
+
+                    <h5>1. Il n'existe pas de « bonne décision » abstraite</h5>
                     <p>
-                        Amber Vault a commencé le jeu avec un positionnement intermédiaire : pas le meilleur vendeur du marché, 
-                        mais une marge nette supérieure à celle de nos concurrents. L'équipe devait décider : 
-                        continuer à viser la rentabilité, ou prendre des risques pour capturer plus de parts de marché ?
+                        Chaque choix a des conséquences court terme ET long terme. Il n'y a pas de solution parfaite, 
+                        seulement des arbitrages acceptables.
+                    </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Application en gestion de projet IT :</strong> Le "triangle d'or" du projet 
+                        (Délais / Coûts / Qualité). On peut en avoir 2, pas les 3. Il faut arbitrer, communiquer 
+                        l'arbitrage au client, et accepter les trade-offs.
                     </p>
 
+                    <h5>2. Les métriques seules ne suffisent pas</h5>
                     <p>
-                        Cela a semblé simple en théorie. En pratique, chaque décision trimestrale a créé des arbitrages impossibles :
+                        Les chiffres trimestriels pouvaient sembler bons (parts de marché en hausse), 
+                        mais masquaient des problèmes structurels (marge rongée, position fragile).
+                    </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Application en gestion de projet IT :</strong> Un projet "livré dans les délais" 
+                        peut avoir épuisé l'équipe et créé de la dette technique. Un budget respecté peut avoir 
+                        sacrifié la qualité. Des métriques de conformité peuvent masquer des problèmes d'usabilité. 
+                        Je dois regarder au-delà des chiffres.
                     </p>
 
-                    <p><strong>Trimestre 1-3 : La question du prix</strong></p>
-                    <p style="margin-left: 20px;">
-                        Nous avons baissé les prix pour attirer plus de clients. Résultat : parts de marché en hausse, 
-                        mais marge sur coûts variables comprimée.
-                    </p>
-
-                    <p><strong>Trimestre 4-6 : L'innovation coûteuse</strong></p>
-                    <p style="margin-left: 20px;">
-                        Nous avons investi dans nouveaux modèles avec spécifications plus avancées. 
-                        Résultat : coûts de production en hausse, délais de mise au marché, risque d'obsolescence.
-                    </p>
-
-                    <p><strong>Trimestre 7-10 : L'expansion géographique</strong></p>
-                    <p style="margin-left: 20px;">
-                        Nous avons doublé notre présence en Asie. Résultat : position en Asie renforcée, 
-                        mais coûts logistiques considérables et concurrence féroce.
-                    </p>
-
-                    <h4>Ce que CESIM m'a vraiment appris</h4>
-                    <p style="margin-left: 20px; border-left: 3px solid #667eea; padding-left: 20px;">
-                        <strong>1. Il n'existe pas de « bonne décision » abstraite.</strong> Chaque choix a des conséquences 
-                        court et long terme.<br><br>
-                        <strong>2. Les métriques seules ne suffisent pas.</strong> Les bons chiffres cachent des questions plus profondes.<br><br>
-                        <strong>3. La communication interne change tout.</strong> Les meilleures décisions viennent de la tension 
-                        productive entre expertise différentes.<br><br>
-                        <strong>4. L'incertitude est la norme.</strong> Apprendre à décider avec 60% d'information, c'est réaliste.
-                    </p>
-
-                    <h4>Transposition au métier de chef de projet IT</h4>
+                    <h5>3. La communication interne change tout</h5>
                     <p>
-                        Ce que j'applique maintenant :
+                        Les meilleures décisions ne venaient pas d'une personne seule, mais de la 
+                        <strong>tension productive entre expertises différentes</strong>.
                     </p>
-                    <ul style="margin-left: 20px; margin-bottom: 15px;">
-                        <li>Rigueur + Humilité : les plannings changent, c'est normal</li>
-                        <li>Arbitrage constant : features vs. délais, coûts vs. qualité</li>
-                        <li>Vision long terme, actions court terme</li>
-                        <li>Équipe = diversité de perspectives, pas ressources à optimiser</li>
+                    <table>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Perspective</th>
+                            <th>Tension créée</th>
+                        </tr>
+                        <tr>
+                            <td>Directeur Financier</td>
+                            <td>"On dépense trop, réduisez les coûts"</td>
+                            <td>vs. Innovation coûteuse</td>
+                        </tr>
+                        <tr>
+                            <td>Directeur R&D</td>
+                            <td>"Il faut innover, les concurrents montent en gamme"</td>
+                            <td>vs. Rentabilité court terme</td>
+                        </tr>
+                        <tr>
+                            <td>Directeur Commercial</td>
+                            <td>"Le marché local est saturé, il faut croître ailleurs"</td>
+                            <td>vs. Coûts de déploiement</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Ces tensions nous ont forcés à penser plus profondément à chaque arbitrage, 
+                        plutôt que de suivre une stratégie unique par défaut.
+                    </p>
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Application en gestion de projet IT :</strong> Inviter activement les voix dissidentes 
+                        dans les décisions. Ne pas chercher l'unanimité, mais la compréhension mutuelle. 
+                        Les meilleures solutions viennent souvent de l'opposition de perspectives.
+                    </p>
+
+                    <h5>4. L'incertitude est la norme, pas l'exception</h5>
+                    <p>
+                        Nous n'avions JAMAIS 100% d'information avant de décider. Les vraies situations :
+                    </p>
+                    <ul>
+                        <li>Données incomplètes (pas de visibilité complète sur les concurrents)</li>
+                        <li>Comportement des concurrents imprévisible</li>
+                        <li>Évolutions technologiques surprenantes</li>
+                        <li>Changements de marché rapides</li>
                     </ul>
-
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Section Certifications -->
-        <section id="certifications" class="section">
-            <h2>Certifications Cisco</h2>
-            
-            <h3 style="text-align: center; color: #764ba2; margin: 30px 0;"> Badges Cisco Vérifiés</h3>
-            <div class="badge-container">
-                <div class="badge-card">
-                    <img src="https://images.credly.com/size/340x340/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png" alt="CCNA ITN Badge">
-                    <h4>CCNA: Introduction to Networks</h4>
-                    <p style="font-size: 0.9em; color: #666;">Cisco Networking Academy</p>
-                    <a href="https://www.credly.com/badges/11483ca9-97c2-4864-9602-dc50e89fd714" target="_blank" class="badge-link">Voir le badge →</a>
-                </div>
-                
-                <div class="badge-card">
-                    <img src="https://images.credly.com/size/340x340/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png" alt="CCNA SRWE Badge">
-                    <h4>CCNA: Switching, Routing & Wireless</h4>
-                    <p style="font-size: 0.9em; color: #666;">Cisco Networking Academy</p>
-                    <a href="https://www.credly.com/badges/74c9196e-e985-4cc3-98dd-f2af9aff87d6" target="_blank" class="badge-link">Voir le badge →</a>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 50px;">Certificats Cisco</h3>
-            <div class="cert-downloads">
-                <div class="cert-download-card" onclick="downloadCert('CCNA_ENSA')">
-                    <h4> CCNA: Enterprise Networking, Security & Automation</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
-                        Configuration avancée, automatisation réseau, et sécurité d'entreprise
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Compétence clé :</strong> Apprendre à décider avec 60-70% d'information, 
+                        puis ajuster rapidement. Pire qu'une mauvaise décision rapide : une bonne décision trop tard.
                     </p>
-                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('CCNA_ENSA')">
-                        📥 Télécharger le certificat
-                    </a>
-                </div>
-
-                <div class="cert-download-card" onclick="downloadCert('CCNA_SRWE')">
-                    <h4> CCNA: Switching, Routing & Wireless Essentials</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
-                        Configuration des switches, routage et réseaux sans fil
+                    <p style="margin-left: 20px; font-style: italic; color: #666;">
+                        <strong>Application en gestion de projet IT :</strong> Les specs changent, 
+                        les ressources ne sont jamais disponibles exactement comme prévu, 
+                        les technologies évoluent pendant le projet, l'apprentissage du client change ses attentes. 
+                        Je dois accepter cette incertitude et bâtir de la flexibilité dans mes plans.
                     </p>
-                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('CCNA_SRWE')">
-                        📥 Télécharger le certificat
-                    </a>
-                </div>
 
-                <div class="cert-download-card" onclick="downloadCert('CCNA_ITN')">
-                    <h4> CCNA: Introduction to Networks</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
-                        Fondamentaux des réseaux, protocoles TCP/IP et adressage
-                    </p>
-                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('CCNA_ITN')">
-                        📥 Télécharger le certificat
-                    </a>
-                </div>
+                    <div class="but-link">
+                        <h5>🎓 Lien avec mon BUT Réseaux & Télécommunications</h5>
+                        <p>
+                            <strong>Compétences du programme mobilisées :</strong>
+                        </p>
+                        <ul>
+                            <li><strong>AC32.01 :</strong> Analyser les évolutions technologiques et commerciales d'une entreprise
+                            <br><em>→ Suivi trimestriel du marché, analyse des positions concurrentes, évolution des technologies</em></li>
+                            <li><strong>AC32.02 :</strong> Analyser l'impact des technologies sur les modes d'organisation
+                            <br><em>→ Compréhension comment les choix technologiques impactent la structure de coûts et la stratégie</em></li>
+                            <li><strong>AC33.03 :</strong> Communiquer efficacement pour mobiliser, convaincre et adapter sa communication
+                            <br><em>→ Leadership d'équipe pour arbitrer les tensions, justification des décisions auprès des stakeholders</em></li>
+                        </ul>
+                    </div>
 
-                <div class="cert-download-card" onclick="downloadCert('Intro_Cybersecurity')">
-                    <h4> Introduction to Cybersecurity</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">
-                        Principes de cybersécurité et protection des systèmes
-                    </p>
-                    <a href="#" class="download-btn" onclick="event.stopPropagation(); downloadCert('Intro_Cybersecurity')">
-                        📥 Télécharger le certificat
-                    </a>
+                    <div class="learning-block">
+                        <h5>💡 Apprentissage critique : Flexibilité + Vision = Résilience</h5>
+                        <p>
+                            <strong>La stratégie se construit dans l'incertitude. La flexibilité et l'apprentissage itératif sont clés.</strong>
+                        </p>
+                        <p style="margin-top: 15px;"><strong>Ce que cela signifie pour un futur chef de projet IT :</strong></p>
+                        <ul>
+                            <li><strong>Rigueur + Humilité :</strong> Les plannings changent, c'est normal. Pas de rigidité doctrinaire.</li>
+                            <li><strong>Arbitrage constant :</strong> Features vs. Délais, Coûts vs. Qualité. Arbitrer, communiquer, accepter les trade-offs.</li>
+                            <li><strong>Vision long terme, actions court terme :</strong> Plan à 6 mois mais revoyez chaque semaine.</li>
+                            <li><strong>Équipe = Diversité de perspectives :</strong> Pas "ressources à optimiser", mais esprits critiques à écouter.</li>
+                            <li><strong>Apprendre vite :</strong> Chaque trimestre (sprint), on tire les leçons et on ajuste.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-        </section>
+        </div>
 
-        <!-- Section Contact -->
-        <section id="contact" class="section">
-            <h2>Me Contacter</h2>
-            
-            <div class="contact-info">
-                <p><strong>📧 Email :</strong> <a href="mailto:costonhugo@gmail.com" style="color: #667eea; text-decoration: none;">costonhugo@gmail.com</a></p>
-                <p><strong>📱 LinkedIn :</strong> <a href="https://linkedin.com/in/hugo-coston-0674052a2" target="_blank" style="color: #667eea; text-decoration: none;">linkedin - Hugo Coston</a></p>
-                <p><strong>💻 GitHub :</strong> <a href="https://github.com/hugo0490" target="_blank" style="color: #667eea; text-decoration: none;">github.com/hugo0490</a></p>
+        <!-- SECTION COMPÉTENCES -->
+        <div id="competences" class="section">
+            <h2>🎯 Compétences Clés</h2>
+            <p style="margin-bottom: 30px;">
+                Synthèse des compétences du BUT Réseaux & Télécommunications démontrées à travers mes projets.
+            </p>
+
+            <h3>Compétences Techniques</h3>
+            <div class="competence-block">
+                <h4>Infrastructure Réseau (AC31.01)</h4>
+                <p>Conception d'architectures réseau avec haute disponibilité, QoS, sécurité.</p>
+                <p>Démontrée par : Orange (observation), SAE 5.02 (Cisco, OSPF, ACL)</p>
             </div>
 
-            <div style="text-align: center; margin: 30px 0;">
-                <button onclick="downloadCV()" class="btn">📄 Télécharger mon CV</button>
+            <div class="competence-block">
+                <h4>Analyse Technologique (AC32.01 & AC32.02)</h4>
+                <p>Compréhension des évolutions technologiques et de leur impact organisationnel.</p>
+                <p>Démontrée par : Orange (transition ADSL→Fibre), CESIM (stratégie technologique)</p>
             </div>
 
-        </section>
+            <h3>Compétences de Management</h3>
+            <div class="competence-block">
+                <h4>Gestion de Projet (AC31.06)</h4>
+                <p>Planification, suivi, ajustement continu, respect des délais.</p>
+                <p>Démontrée par : SAE 5.02 (Trello, standups, livraison sereine)</p>
+            </div>
+
+            <div class="competence-block">
+                <h4>Leadership d'Équipe (AC33.01)</h4>
+                <p>Création d'un environnement de confiance, écoute active, clarté des responsabilités.</p>
+                <p>Démontrée par : SAE 5.02 (gestion équipe), Prud'hommes (théorie appliquée)</p>
+            </div>
+
+            <div class="competence-block">
+                <h4>Collaboration (AC33.02)</h4>
+                <p>Mise en place d'environnements de travail collaboratifs, communication régulière.</p>
+                <p>Démontrée par : SAE 5.02 (Trello + standups), CESIM (travail collectif)</p>
+            </div>
+
+            <div class="competence-block">
+                <h4>Communication (AC33.03)</h4>
+                <p>Mobiliser, convaincre, adapter sa communication selon les audiences.</p>
+                <p>Démontrée par : SAE 5.02 (leadership technique), CESIM (justification des décisions)</p>
+            </div>
+        </div>
+
+        <!-- SECTION CONTACT -->
+        <div id="contact" class="section">
+            <h2>📧 Contact</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                N'hésitez pas à me contacter pour discuter de mes projets ou d'opportunités professionnelles.
+            </p>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Votre email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Votre message"></textarea>
+                </div>
+                <button class="btn" style="width: 100%;">Envoyer</button>
+            </div>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Hugo Coston - Tous droits réservés</p>
-    </footer>
 
     <script>
         function showSection(sectionId) {
+            // Masquer toutes les sections
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
                 section.classList.remove('active');
             });
+
+            // Afficher la section demandée
             document.getElementById(sectionId).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function toggleArticle(element) {
             element.classList.toggle('expanded');
-        }
-
-        function downloadCV() {
-            window.location.href = 'CV_COSTON_Hugo.pdf';
-        }
-
-        function downloadCert(certName) {
-            const certFiles = {
-                'CCNA_ENSA': 'certificates/CCNA_Enterprise_Networking_Security_Automation.pdf',
-                'CCNA_SRWE': 'certificates/CCNA_Switching_Routing_Wireless_Essentials.pdf',
-                'CCNA_ITN': 'certificates/CCNA_Introduction_to_Networks.pdf',
-                'Intro_Cybersecurity': 'certificates/Introduction_to_Cybersecurity.pdf'
-            };
-            
-            if (certFiles[certName]) {
-                window.location.href = certFiles[certName];
-            }
         }
     </script>
 </body>
