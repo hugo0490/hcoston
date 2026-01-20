@@ -140,6 +140,12 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 14px;
+            margin: 5px;
+        }
+
         .contact-form {
             max-width: 600px;
             margin: 30px auto;
@@ -188,6 +194,165 @@
         .project-card:hover, .cert-card:hover {
             transform: translateX(10px);
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        /* STYLES POUR ARTICLES PORTFOLIO */
+        .portfolio-article {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .portfolio-article:hover {
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .article-header h3 {
+            color: white;
+            margin: 0;
+            flex: 1;
+        }
+
+        .article-date {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-right: 20px;
+        }
+
+        .expand-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-article.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .article-content {
+            display: none;
+            padding: 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .portfolio-article.expanded .article-content {
+            display: block;
+            max-height: 2000px;
+        }
+
+        .article-content h4 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .article-content p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .article-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            display: inline-block;
+        }
+
+        .competence-block {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .competence-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .competence-percent {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s;
+        }
+
+        .competence-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .competence-category h5 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .competence-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .competence-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+        }
+
+        .competence-category li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
         }
 
         .badge-container {
@@ -305,77 +470,6 @@
             font-size: 1.1em;
         }
 
-        /* Styles pour les compétences */
-        .competence-block {
-            background: #f8f9fa;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-        }
-
-        .competence-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .competence-percent {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #e0e0e0;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s;
-        }
-
-        .competence-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .competence-category h4 {
-            margin-top: 0;
-            color: #667eea;
-        }
-
-        .competence-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .competence-category li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-            color: #666;
-        }
-
-        .competence-category li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -404,6 +498,16 @@
             .competence-details {
                 grid-template-columns: 1fr;
             }
+
+            .article-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .article-date {
+                margin-top: 10px;
+                margin-right: 0;
+            }
         }
     </style>
 </head>
@@ -414,6 +518,7 @@
             <ul class="nav-links">
                 <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
                 <li><a href="#" onclick="showSection('projets')">Projets</a></li>
+                <li><a href="#" onclick="showSection('portfolio')">📚 Portfolio</a></li>
                 <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
                 <li><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
@@ -454,13 +559,11 @@
                 </div>
             </div>
 
-            <!-- SECTION COMPÉTENCES (MAINTENANT À L'INTÉRIEUR) -->
             <h2 style="margin-top: 60px;">Mes Compétences</h2>
             <p style="font-size: 1.05em; color: #666; margin-bottom: 30px;">
                 Voici une synthèse de mes compétences développées au cours de ma formation.
             </p>
 
-            <!-- Bloc 1: Administrer les réseaux -->
             <div class="competence-block">
                 <div class="competence-header">
                     <h3 style="margin: 0; color: #667eea;">Administrer les réseaux et Internet</h3>
@@ -471,7 +574,7 @@
                 </div>
                 <div class="competence-details">
                     <div class="competence-category">
-                        <h4>💻 Windows Server</h4>
+                        <h5>💻 Windows Server</h5>
                         <ul>
                             <li>Windows Server 2019/2022/2025</li>
                             <li>Active Directory, GPO</li>
@@ -480,7 +583,7 @@
                         </ul>
                     </div>
                     <div class="competence-category">
-                        <h4>🐧 Linux</h4>
+                        <h5>🐧 Linux</h5>
                         <ul>
                             <li>DNS, Samba, FTP</li>
                             <li>SSH, Apache 2, DHCP</li>
@@ -489,7 +592,7 @@
                         </ul>
                     </div>
                     <div class="competence-category">
-                        <h4>🌐 Réseaux</h4>
+                        <h5>🌐 Réseaux</h5>
                         <ul>
                             <li>Configuration Switches L2/L3</li>
                             <li>Routage statique et dynamique</li>
@@ -500,7 +603,6 @@
                 </div>
             </div>
 
-            <!-- Bloc 2: Connecter les entreprises -->
             <div class="competence-block">
                 <div class="competence-header">
                     <h3 style="margin: 0; color: #667eea;">Connecter les entreprises</h3>
@@ -511,7 +613,7 @@
                 </div>
                 <div class="competence-details">
                     <div class="competence-category">
-                        <h4>📡 WiFi & Sans-fil</h4>
+                        <h5>📡 WiFi & Sans-fil</h5>
                         <ul>
                             <li>Configuration points d'accès</li>
                             <li>Sécurité WPA2/WPA3</li>
@@ -520,7 +622,7 @@
                         </ul>
                     </div>
                     <div class="competence-category">
-                        <h4>📱 4G/5G</h4>
+                        <h5>📱 4G/5G</h5>
                         <ul>
                             <li>Architecture réseaux mobiles</li>
                             <li>Protocoles de télécommunications</li>
@@ -530,7 +632,6 @@
                 </div>
             </div>
 
-            <!-- Bloc 3: Créer des outils informatiques -->
             <div class="competence-block">
                 <div class="competence-header">
                     <h3 style="margin: 0; color: #667eea;">Créer des outils et applications informatiques</h3>
@@ -541,7 +642,7 @@
                 </div>
                 <div class="competence-details">
                     <div class="competence-category">
-                        <h4>🌐 Développement Web</h4>
+                        <h5>🌐 Développement Web</h5>
                         <ul>
                             <li>HTML, CSS, JavaScript</li>
                             <li>PHP, MySQL</li>
@@ -549,14 +650,14 @@
                         </ul>
                     </div>
                     <div class="competence-category">
-                        <h4>🐍 Programmation</h4>
+                        <h5>🐍 Programmation</h5>
                         <ul>
                             <li>Python</li>
                             <li>Programmation Objet</li>
                         </ul>
                     </div>
                     <div class="competence-category">
-                        <h4>📊 Bases de données</h4>
+                        <h5>📊 Bases de données</h5>
                         <ul>
                             <li>SQL (MySQL, PostgreSQL)</li>
                             <li>Conception de BDD</li>
@@ -567,7 +668,6 @@
                 </div>
             </div>
 
-            <!-- Bloc 4: PILOTAGE DE PROJETS -->
             <div class="competence-block" style="border-left-color: #9b59b6; background: linear-gradient(135deg, #9b59b615 0%, #667eea15 100%);">
                 <div class="competence-header">
                     <h3 style="margin: 0; color: #9b59b6;">🎯 Piloter des projets (Spécialité PilPro)</h3>
@@ -578,7 +678,7 @@
                 </div>
                 <div class="competence-details">
                     <div class="competence-category">
-                        <h4>📋 Gestion de projet</h4>
+                        <h5>📋 Gestion de projet</h5>
                         <ul>
                             <li>Méthodologies Agile/Scrum</li>
                             <li>Planification et suivi projet</li>
@@ -587,7 +687,7 @@
                         </ul>
                     </div>
                     <div class="competence-category">
-                        <h4>📈 Pilotage stratégique</h4>
+                        <h5>📈 Pilotage stratégique</h5>
                         <ul>
                             <li>Analyse besoins clients</li>
                             <li>Budget et ROI</li>
@@ -600,7 +700,7 @@
 
         </section>
 
-        <!-- Section Projets -->
+        <!-- Section Projets Universitaires -->
         <section id="projets" class="section">
             <h2>Mes Projets</h2>
             
@@ -646,6 +746,282 @@
                     <span class="tag">Automation</span>
                 </div>
             </div>
+        </section>
+
+        <!-- NOUVELLE SECTION : PORTFOLIO ARTICLES -->
+        <section id="portfolio" class="section">
+            <h2>📚 Mon Portfolio Réflexif</h2>
+            <p style="font-size: 1.1em; color: #666; margin-bottom: 30px; text-align: center;">
+                Découvrez mes apprentissages clés tirés de mes expériences académiques et professionnelles.
+                Chaque article explore une dimension différente de ma formation en gestion de projet et réseaux.
+            </p>
+
+            <!-- Article 1: Orange -->
+            <div class="portfolio-article" onclick="toggleArticle(this)">
+                <div class="article-header">
+                    <h3>🏗️ Plongée au cœur des réseaux Orange</h3>
+                    <span class="article-date">Octobre 2025</span>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <h4>Infrastructure et enjeux de transition technologique</h4>
+                    <p>
+                        En octobre 2025, dans le cadre de notre formation en gestion de projet au sein du BUT Réseaux & Télécommunications, 
+                        nous avons eu l'opportunité exceptionnelle de visiter le central téléphonique de Seloncourt. 
+                        Ce site stratégique, souvent méconnu du grand public, incarne l'un des défis majeurs de notre époque : 
+                        la transition numérique d'une infrastructure héritée du modèle ADSL vers les réseaux très haut débit par fibre optique.
+                    </p>
+
+                    <h4>La complexité invisible de nos connexions quotidiennes</h4>
+                    <p>
+                        Cette visite n'était pas une simple découverte touristique, mais une immersion pédagogique dans les réalités 
+                        opérationnelles d'un projet de transformation infrastructurelle de grande envergure. Le central de Seloncourt 
+                        m'a frappé par trois réalités souvent occultées en académie :
+                    </p>
+                    <p style="margin-left: 20px; border-left: 3px solid #667eea; padding-left: 20px;">
+                        <strong>1. La complexité de la coexistence technique.</strong> Le site doit simultanément supporter le réseau cuivre 
+                        ADSL existant (toujours actif pour les clients non éligibles à la fibre) tout en déployant progressivement 
+                        l'infrastructure de fibre optique. Cette transition n'est pas instantanée : elle demande une orchestration 
+                        précise pour éviter les ruptures de service.<br><br>
+                        <strong>2. L'importance de la coordination multidisciplinaire.</strong> Bien au-delà des ingénieurs électroniciens, 
+                        le projet repose sur des génie-civilistes, des agents de terrain, des responsables qualité, des chefs de projet. 
+                        La réussite technique dépend de la communication entre ces acteurs.<br><br>
+                        <strong>3. L'infrastructure comme enjeu stratégique.</strong> Ces centraux déterminent qui a accès aux services 
+                        numériques et à quelle qualité. Le déploiement de la fibre n'est pas qu'une amélioration technologique : 
+                        c'est une question d'équité territoriale.
+                    </p>
+
+                    <h4>Apprentissage clé</h4>
+                    <p>
+                        Pour un futur chef de projet IT, cette immersion m'a rappelé une vérité fondamentale : 
+                        je ne peux pas piloter efficacement ce que je ne comprends pas physiquement et stratégiquement.
+                    </p>
+
+                    <div class="article-tags">
+                        <span class="article-tag">#InfrastructureRéseau</span>
+                        <span class="article-tag">#FibreOptique</span>
+                        <span class="article-tag">#GestionDeProjet</span>
+                        <span class="article-tag">#Terrain</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2: SAE 5.02 -->
+            <div class="portfolio-article" onclick="toggleArticle(this)">
+                <div class="article-header">
+                    <h3>🔧 SAE 5.02 : Gérer un projet réseau sous contrainte</h3>
+                    <span class="article-date">Janvier 2026</span>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <h4>De la théorie à la livraison</h4>
+                    <p>
+                        En parallèle de mes cours, dans le cadre de la SAÉ 5.02 « Piloter un projet informatique », 
+                        j'ai eu à concevoir et déployer une infrastructure réseau complète pour un hôpital de campagne fictif. 
+                        Sur le papier, c'était un exercice académique parmi d'autres. En réalité, ça a été mon premier vrai test 
+                        en tant que chef de projet.
+                    </p>
+
+                    <h4>Le problème initial : organisation vs. chaos</h4>
+                    <p>
+                        Les premières 48 heures ont mis en évidence un risque majeur. Chacun savait ce qu'il devait faire techniquement 
+                        (configurer Cisco, implémenter OSPF, mettre en place la sécurité). Mais personne n'avait de vue d'ensemble sur :
+                    </p>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>Qui faisait quoi et à quel stade ?</li>
+                        <li>Comment nos travaux s'articulaient-ils ?</li>
+                        <li>Quels étaient les goulots d'étranglement critiques ?</li>
+                        <li>Comment ajustions-nous si quelque chose prenait plus de temps que prévu ?</li>
+                    </ul>
+
+                    <h4>Ma réponse : Structure simple, impact maximal</h4>
+                    <p>
+                        J'ai décidé de mettre en place un système de gestion de projet léger mais rigoureux, centré sur trois éléments : 
+                        <strong>visibilité, responsabilité et feedback régulier</strong>.
+                    </p>
+
+                    <p><strong>1. Trello pour la clarté permanente</strong></p>
+                    <p style="margin-left: 20px;">
+                        J'ai créé un tableau Trello avec 5 colonnes : À faire → En cours → En test → En relecture → Terminé. 
+                        Chaque tâche avait une description claire, une personne responsable, une deadline. 
+                        Résultat : chacun savait où on en était, à tout moment.
+                    </p>
+
+                    <p><strong>2. Réunions courtes et fréquentes (15 min, tous les jours)</strong></p>
+                    <p style="margin-left: 20px;">
+                        Chaque matin, 15 minutes debout : « Qu'avez-vous fait ? Qu'allez-vous faire ? Quels blocages ? » 
+                        C'était spartiate, efficace. Les problèmes remontaient rapidement et se résolvaient dans les 5 minutes qui suivaient.
+                    </p>
+
+                    <p><strong>3. Ajustement continu du planning</strong></p>
+                    <p style="margin-left: 20px;">
+                        Contrairement à un planning Waterfall rigide, on se réservait du temps à la fin de chaque jour pour 
+                        évaluer la progression réelle vs. prévue et réallouer les ressources si nécessaire.
+                    </p>
+
+                    <h4>Résultats : nous avons livré dans les délais</h4>
+                    <p>
+                        À la deadline, nous avions : architecture réseau complète et fonctionnelle ✓, 
+                        haute disponibilité implémentée ✓, sécurité en place ✓, documentation suffisante ✓. 
+                        Pas de panique last minute.
+                    </p>
+
+                    <div class="article-tags">
+                        <span class="article-tag">#GestionDeProjet</span>
+                        <span class="article-tag">#Leadership</span>
+                        <span class="article-tag">#Trello</span>
+                        <span class="article-tag">#Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3: Prud'hommes -->
+            <div class="portfolio-article" onclick="toggleArticle(this)">
+                <div class="article-header">
+                    <h3>⚖️ Les Prud'hommes : Quand le management commence par l'écoute</h3>
+                    <span class="article-date">Octobre 2025</span>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <h4>Ce que le silence d'une salle d'audience m'a enseigné</h4>
+                    <p>
+                        Le 3 octobre 2025, avec ma promotion du BUT Réseaux & Télécommunications, 
+                        nous avons passé une journée aux Prud'hommes de Bourgogne. 
+                        Une expérience qui, a priori, n'avait rien à voir avec nos études technologiques. Et pourtant.
+                    </p>
+
+                    <h4>La structure du dialogue</h4>
+                    <p>
+                        En marchant dans les couloirs, j'ai réalisé quelque chose : les enjeux du travail, 
+                        ce ne sont pas des concepts abstraits. Ce sont des histoires concrètes, des tensions réelles, 
+                        des incompréhensions qui se sont cristallisées en conflit.
+                    </p>
+
+                    <p>
+                        Ce qui m'a frappé : <strong>les assesseurs ne jugeaient pas, ils comprenaient.</strong> 
+                        Deux représentants salariés, deux représentants employeurs, face à face dans l'équilibre. 
+                        Les avocats plaidaient. Mais ce qui importait vraiment : écouter. Recouper les versions. 
+                        Chercher ce qui s'était réellement passé.
+                    </p>
+
+                    <h4>Le lien avec le management de projet IT</h4>
+                    <p>
+                        J'ai commencé cette formation en pensant que piloter un projet informatique consistait à :
+                    </p>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>Planifier les tâches sur un outil (Trello, Asana)</li>
+                        <li>Allouer les ressources efficacement</li>
+                        <li>Respecter les délais et les budgets</li>
+                        <li>Produire des livrables conformes</li>
+                    </ul>
+
+                    <p>
+                        Mais aux Prud'hommes, j'ai compris que cette approche, excellente pour la rigueur, omet une dimension cruciale : 
+                        <strong>la prévention des conflits par la qualité du dialogue.</strong>
+                    </p>
+
+                    <p style="margin-left: 20px; border-left: 3px solid #667eea; padding-left: 20px;">
+                        Dans une équipe de projet IT :<br>
+                        • Un manque de clarté sur les responsabilités devient un ressentiment<br>
+                        • Une décision imposée sans consultation crée de la friction<br>
+                        • L'absence d'écoute réelle cause de l'incompréhension<br>
+                        • Et une incompréhension non traitée ? Elle devient incident, crise, puis conflit
+                    </p>
+
+                    <h4>Vers un nouveau modèle de leadership technique</h4>
+                    <p>
+                        Pour un futur chef de projet IT, cela signifie : 
+                        <strong>la gestion de projets repose d'abord sur la capacité à préserver la confiance 
+                        et la clarté entre les personnes.</strong>
+                    </p>
+
+                    <div class="article-tags">
+                        <span class="article-tag">#Management</span>
+                        <span class="article-tag">#Écoute</span>
+                        <span class="article-tag">#Communication</span>
+                        <span class="article-tag">#Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4: CESIM -->
+            <div class="portfolio-article" onclick="toggleArticle(this)">
+                <div class="article-header">
+                    <h3>💰 CESIM Business Simulation : Gérer une entreprise</h3>
+                    <span class="article-date">Janvier 2026</span>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <h4>Arbitrer entre des objectifs contradictoires</h4>
+                    <p>
+                        La simulation d'entreprise CESIM est devenue pour moi bien plus qu'un exercice académique. 
+                        Sur 12 trimestres virtuels, j'ai piloté une entreprise fictive—Amber Vault, un fabricant de téléphones mobiles—
+                        face à la volatilité des marchés, la pression des actionnaires et les contraintes budgétaires réelles.
+                    </p>
+
+                    <p>
+                        C'était fascinant et humiliant à la fois.
+                    </p>
+
+                    <h4>Les vraies tensions du management</h4>
+                    <p>
+                        Amber Vault a commencé le jeu avec un positionnement intermédiaire : pas le meilleur vendeur du marché, 
+                        mais une marge nette supérieure à celle de nos concurrents. L'équipe devait décider : 
+                        continuer à viser la rentabilité, ou prendre des risques pour capturer plus de parts de marché ?
+                    </p>
+
+                    <p>
+                        Cela a semblé simple en théorie. En pratique, chaque décision trimestrale a créé des arbitrages impossibles :
+                    </p>
+
+                    <p><strong>Trimestre 1-3 : La question du prix</strong></p>
+                    <p style="margin-left: 20px;">
+                        Nous avons baissé les prix pour attirer plus de clients. Résultat : parts de marché en hausse, 
+                        mais marge sur coûts variables comprimée.
+                    </p>
+
+                    <p><strong>Trimestre 4-6 : L'innovation coûteuse</strong></p>
+                    <p style="margin-left: 20px;">
+                        Nous avons investi dans nouveaux modèles avec spécifications plus avancées. 
+                        Résultat : coûts de production en hausse, délais de mise au marché, risque d'obsolescence.
+                    </p>
+
+                    <p><strong>Trimestre 7-10 : L'expansion géographique</strong></p>
+                    <p style="margin-left: 20px;">
+                        Nous avons doublé notre présence en Asie. Résultat : position en Asie renforcée, 
+                        mais coûts logistiques considérables et concurrence féroce.
+                    </p>
+
+                    <h4>Ce que CESIM m'a vraiment appris</h4>
+                    <p style="margin-left: 20px; border-left: 3px solid #667eea; padding-left: 20px;">
+                        <strong>1. Il n'existe pas de « bonne décision » abstraite.</strong> Chaque choix a des conséquences 
+                        court et long terme.<br><br>
+                        <strong>2. Les métriques seules ne suffisent pas.</strong> Les bons chiffres cachent des questions plus profondes.<br><br>
+                        <strong>3. La communication interne change tout.</strong> Les meilleures décisions viennent de la tension 
+                        productive entre expertise différentes.<br><br>
+                        <strong>4. L'incertitude est la norme.</strong> Apprendre à décider avec 60% d'information, c'est réaliste.
+                    </p>
+
+                    <h4>Transposition au métier de chef de projet IT</h4>
+                    <p>
+                        Ce que j'applique maintenant :
+                    </p>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li>Rigueur + Humilité : les plannings changent, c'est normal</li>
+                        <li>Arbitrage constant : features vs. délais, coûts vs. qualité</li>
+                        <li>Vision long terme, actions court terme</li>
+                        <li>Équipe = diversité de perspectives, pas ressources à optimiser</li>
+                    </ul>
+
+                    <div class="article-tags">
+                        <span class="article-tag">#Stratégie</span>
+                        <span class="article-tag">#GestionBusiness</span>
+                        <span class="article-tag">#Décision</span>
+                        <span class="article-tag">#Simulation</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Section Certifications -->
@@ -743,6 +1119,10 @@
             });
             document.getElementById(sectionId).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleArticle(element) {
+            element.classList.toggle('expanded');
         }
 
         function downloadCV() {
