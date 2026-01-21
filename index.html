@@ -5,19 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hugo Coston - Portfolio</title>
     <style>
-                .article-images {
+        .article-images {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            margin: 15px 0;
+            gap: 20px;
+            margin: 25px 0;
             justify-content: center;
         }
         
         .article-images img {
-            max-width: 300px;
+            max-width: 100%;
+            width: calc(50% - 10px);
+            min-width: 300px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+        
+        .article-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+        
+        /* Modal pour agrandir les images */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s;
+        }
+        
+        .image-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            animation: zoomIn 0.3s;
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            user-select: none;
+        }
+        
+        .close-modal:hover {
+            color: #667eea;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -266,7 +324,7 @@
 
         .portfolio-article.expanded .article-content {
             display: block;
-            max-height: 2000px;
+            max-height: 5000px;
         }
 
         .article-content h4 {
@@ -521,10 +579,26 @@
                 margin-top: 10px;
                 margin-right: 0;
             }
+            
+            .article-images img {
+                width: 100%;
+                min-width: 100%;
+            }
+            
+            .close-modal {
+                right: 20px;
+                font-size: 30px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Modal pour agrandir les images -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <header>
         <nav>
             <div class="logo">Hugo COSTON</div>
@@ -756,9 +830,9 @@
                     </p>
             
                     <div class="article-images">
-                        <img src="images/Centrale_groupe.jpg" alt="Groupe devant le central téléphonique Orange Seloncourt">
-                        <img src="images/centrale_interieur1.jpg" alt="Intérieur du central téléphonique Orange Seloncourt">
-                        <img src="images/centrale_interieur2.jpg" alt="Baies et équipements du central téléphonique Orange Seloncourt">
+                        <img src="images/Centrale_groupe.jpg" alt="Groupe devant le central téléphonique Orange Seloncourt" onclick="openImageModal(event, this.src)">
+                        <img src="images/centrale_interieur1.jpg" alt="Intérieur du central téléphonique Orange Seloncourt" onclick="openImageModal(event, this.src)">
+                        <img src="images/centrale_interieur2.jpg" alt="Baies et équipements du central téléphonique Orange Seloncourt" onclick="openImageModal(event, this.src)">
                     </div>
             
                     <h4>Ce que j'ai compris</h4>
@@ -884,7 +958,7 @@
                     </ul>
             
                     <div class="article-images">
-                        <img src="images/Trello_SAE502.png" alt="Tableau Trello – SAÉ 5.02">
+                        <img src="images/Trello_SAE502.png" alt="Tableau Trello – SAÉ 5.02" onclick="openImageModal(event, this.src)">
                     </div>
             
                     <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 8px;">
@@ -941,7 +1015,7 @@
                     </p>
             
                     <div class="article-images">
-                        <img src="images/prudhomme.jpg" alt="Visite pédagogique au tribunal des Prud'hommes">
+                        <img src="images/prudhomme.jpg" alt="Visite pédagogique au tribunal des Prud'hommes" onclick="openImageModal(event, this.src)">
                     </div>
             
                     <h4>Ce que j'ai observé</h4>
@@ -1135,7 +1209,7 @@
                         et une communication claire autour des choix stratégiques.
                     </p>
                     <div class="article-images">
-                        <img src="images/Screenshot_1.png" alt="image de la simulation cesim">
+                        <img src="images/Screenshot_1.png" alt="image de la simulation cesim" onclick="openImageModal(event, this.src)">
                     </div>
                     <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 8px;">
                         <h5 style="color: #d39e00; margin-bottom: 10px;">Apprentissages critiques mobilisés</h5>
@@ -1273,6 +1347,27 @@
                 window.location.href = certFiles[certName];
             }
         }
+
+        // Fonctions pour le modal d'agrandissement des images
+        function openImageModal(event, imageSrc) {
+            event.stopPropagation(); // Empêche la propagation du clic à l'article
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+
+        // Fermer le modal avec la touche Échap
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
     </script>
 </body>
 </html>
